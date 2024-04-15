@@ -40,31 +40,23 @@ class BesinDetayiFragment : Fragment() {
 
         arguments?.let {
             besinId = BesinDetayiFragmentArgs.fromBundle(it).besinId
-
         }
 
         viewModel = ViewModelProvider(this)[BesinDetayiViewModel::class.java]
         viewModel.roomVerisiniAl(besinId)
-
-
         observeLiveData()
 
     }
 
     fun observeLiveData(){
-
         viewModel.besinLiveData.observe(viewLifecycleOwner) { besin ->
-
-
                 binding.besinIsim.text = besin.besinIsim
                 binding.besinKalori.text = besin.besinKalori
                 binding.besinKarbonhidrat.text = besin.besinKarbonhidrat
                 binding.besinProtein.text = besin.besinProtein
                 binding.besinYag.text = besin.besinYag
                 binding.besinImage.gorselIndir(besin.besinGorsel, placeholderYap(requireContext()))
-
         }
-
     }
 
     override fun onDestroyView() {

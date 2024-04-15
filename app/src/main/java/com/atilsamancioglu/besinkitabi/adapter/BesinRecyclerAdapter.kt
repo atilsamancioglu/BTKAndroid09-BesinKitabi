@@ -46,4 +46,5 @@ class BesinRecyclerAdapter(val besinListesi : ArrayList<Besin>) : RecyclerView.A
 
     }
 
+
 }

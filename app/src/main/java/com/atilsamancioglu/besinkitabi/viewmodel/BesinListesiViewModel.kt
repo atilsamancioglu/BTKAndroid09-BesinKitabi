@@ -65,8 +65,6 @@ class BesinListesiViewModel(application: Application) : AndroidViewModel(applica
         }
 
 
-
-
     }
 
     private fun besinleriGoster(besinlerListesi : List<Besin>){

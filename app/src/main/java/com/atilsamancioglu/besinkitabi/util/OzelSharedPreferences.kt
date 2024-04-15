@@ -10,7 +10,6 @@ class OzelSharedPreferences {
         private val ZAMAN = "zaman"
         private var sharedPreferences : SharedPreferences? = null
 
-
         @Volatile private var instance : OzelSharedPreferences? = null
         private val lock = Any()
         operator fun invoke(context: Context) : OzelSharedPreferences = instance ?: synchronized(lock) {
@@ -23,8 +22,6 @@ class OzelSharedPreferences {
             sharedPreferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context)
             return OzelSharedPreferences()
         }
-
-
     }
 
     fun zamaniKaydet(zaman: Long){

@@ -38,7 +38,6 @@ class BesinListesiFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         viewModel = ViewModelProvider(this)[BesinListesiViewModel::class.java]
         viewModel.refreshData()
 
@@ -54,32 +53,25 @@ class BesinListesiFragment : Fragment() {
         }
 
         observeLiveData()
-
-
     }
 
     fun observeLiveData(){
 
         viewModel.besinler.observe(viewLifecycleOwner) {
-
                 binding.besinListRecycler.visibility = View.VISIBLE
                 recyclerBesinAdapter.besinListesiniGuncelle(it)
-
         }
 
         viewModel.besinHataMesaji.observe(viewLifecycleOwner) {
-
                 if (it) {
                     binding.besinHataMesaji.visibility = View.VISIBLE
                     binding.besinListRecycler.visibility = View.GONE
                 } else {
                     binding.besinHataMesaji.visibility = View.GONE
                 }
-
         }
 
         viewModel.besinYukleniyor.observe(viewLifecycleOwner) {
-
                 if (it) {
                     binding.besinListRecycler.visibility = View.GONE
                     binding.besinHataMesaji.visibility = View.GONE
@@ -87,7 +79,6 @@ class BesinListesiFragment : Fragment() {
                 } else {
                     binding.besinYukleniyor.visibility = View.GONE
                 }
-
         }
 
     }
