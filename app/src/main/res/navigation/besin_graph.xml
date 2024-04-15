@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/besin_graph">
+    android:id="@+id/besin_graph"
+    app:startDestination="@id/besinListesiFragment">
     <fragment
         android:id="@+id/besinListesiFragment"
         android:name="com.atilsamancioglu.besinkitabi.view.BesinListesiFragment"

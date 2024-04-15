@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.preference.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,10 +67,8 @@ dependencies {
     annotationProcessor ("androidx.room:room-compiler:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
 
-    implementation ("androidx.room:room-rxjava3:$room_version")
-    implementation ("io.reactivex.rxjava3:rxandroid:3.0.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
-
+    implementation ("androidx.room:room-ktx:$room_version")
     val lifecycle_version = "2.7.0"
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")

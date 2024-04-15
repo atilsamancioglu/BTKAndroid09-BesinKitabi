@@ -21,7 +21,6 @@
         android:layout_height="match_parent"
         android:layout_margin="3dp"
         android:layout_weight="2"
-        android:downloadImage="@{besin.besinGorsel}"
         >
 
     </ImageView>
